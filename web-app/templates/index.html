@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/app.css') }}" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2@2.0.0/dist/spectrum.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <h2> Deep Learning in Action </h2>
+    <div class="">
+        <div class="row">
+            <div class="col-sm-1"></div>
+
+            <div class="col-sm-10">
+                <h4>Object Detection and Semantic Segmentation with state of art models</h4>
+                <p><b>DeepLab-v3-ResNet101&nbsp&nbsp&nbsp&nbspDeepLab-v3-Xception&nbsp&nbsp&nbsp&nbspCentermask2</b></p>
+                <div class="overlay">
+                    <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-8">
+                        <label for="file" id="label_file">&nbsp;</label>
+                        <input class="form-control" type="file" id="input_file" />
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label></label>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-process">Process</button>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h5 class="header_label"> Input </h5>
+                    <div class="col-md-12">
+                        <div class="div-img-container">
+                            <div class="centermask">
+                                <img class="img" id="img_input">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5 class="header_label"> ResNet-101 </h5>
+                    <div class="col-md-12">
+                        <div class="div-img-container-resnet">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5 class="header_label"> Xception </h5>
+                    <div class="col-md-12">
+                        <div class="div-img-container-xception">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5 class="header_label"> Centermask2 </h5>
+                    <div class="col-md-12">
+                        <div class="div-img-container-centermask">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</body>
+
+</html>
